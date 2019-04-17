@@ -1,0 +1,30 @@
+config:
+  target: "https://staging1.local" # Testing staging
+  phases: # There are 3 phases
+    - duration: 60 # First phase, we run for 60 seconds
+      arrivalRate: 5 # 5 Users per second
+    - duration: 120 # Second phase, we run for 120 seconds
+      arrivalRate: 5 # Start with 5 users per second
+      rampTo: 50 # Ramp up to 50 users per second
+    - duration: 600 # Third phase, we run for 600 seconds
+      arrivalRate: 50 # 50 users per seconds
+  payload:
+    path: "keywords.csv" # Load configuration from keywords.csv
+    fields:
+      - "keywords" # Load field keywords
+scenarios:
+  - name: "Search and buy"
+    flow:
+      - post:
+          url: "/search" # POST to "https://staging1.local/search"
+          body: "kw={{ keywords }}" # with form body kw=keywords load from csv
+          capture:
+            json: "$.results[0].id" # Capture and store as id
+            as: "id"
+      - get:
+          url: "/details/{{ id }}" # Run /details/id
+      - think: 3 # Wait for 3 seconds
+      - post:
+          url: "/cart"
+          json:
+            productId: "{{ id }}" # Post to /card with JSON body { "productId": id }

@@ -1,12 +1,12 @@
 config:
   target: 'https://artillery.io'
   phases:
-    - duration: 60
-      arrivalRate: 20
+    - duration: 60 # Test for 60 seconds
+      arrivalRate: 20 # Incoming user: 20 users per second
   defaults:
     headers:
-      x-my-service-auth: '987401838271002188298567'
+      x-my-service-auth: '987401838271002188298567' # Header
 scenarios:
   - flow:
     - get:
-        url: "/docs"
+        url: "/docs" # URL

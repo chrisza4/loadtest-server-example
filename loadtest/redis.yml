@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 30
+      arrivalRate: 20
+  payload:
+    path: '../user-tokens.csv'
+    fields:
+      - token
+  variables:
+    xxx:
+      - "haha"
+scenarios:
+  - flow:
+    - get:
+        url: "/find-redis?token={{ token }}" # URL

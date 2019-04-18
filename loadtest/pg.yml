@@ -1,0 +1,13 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 30
+      arrivalRate: 20
+  payload:
+    path: '../user-tokens.csv'
+    fields:
+      - token
+scenarios:
+  - flow:
+    - get:
+        url: "/find-pg?token={{ token }}"

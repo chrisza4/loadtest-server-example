@@ -1,0 +1,15 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 20 # Test for 60 seconds
+      arrivalRate: 20 # Incoming user: 20 users per second
+  ensure:
+    p95: 200
+    min: 20
+    max: 400
+    median: 200
+    p99: 150
+scenarios:
+  - flow:
+    - get:
+        url: "/" # URL

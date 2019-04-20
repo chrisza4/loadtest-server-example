@@ -1,7 +1,7 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
-const RedisEndpoint = require('./redis')
-const PgEndpoint = require('./postgresql')
+// const RedisEndpoint = require('./redis')
+// const PgEndpoint = require('./postgresql')
 const app = express()
 const port = 3000
 
@@ -28,15 +28,15 @@ app.get('/encrypt-1000', (req, res) => {
   })
 })
 
-app.get('/find-redis', async (req, res) => {
-  const data = await RedisEndpoint.findByToken(req.query.token)
-  res.send(data)
-})
+// app.get('/find-redis', async (req, res) => {
+//   const data = await RedisEndpoint.findByToken(req.query.token)
+//   res.send(data)
+// })
 
-app.get('/find-pg', async (req, res) => {
-  const data = await PgEndpoint.findByToken(req.query.token)
-  res.send(data)
-})
+// app.get('/find-pg', async (req, res) => {
+//   const data = await PgEndpoint.findByToken(req.query.token)
+//   res.send(data)
+// })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 

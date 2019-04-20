@@ -1951,6 +1951,14 @@ nanotimer@^0.3.15:
   resolved "https://registry.yarnpkg.com/nanotimer/-/nanotimer-0.3.15.tgz#280d277db9146eca6f8a570b572abaf2a9acc754"
   integrity sha1-KA0nfbkUbspvilcLVyq68qmsx1Q=
 
+nats@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/nats/-/nats-1.2.10.tgz#3f673e80d3a513f7802b0a5c1f227127a3d1d780"
+  integrity sha512-0FQMINZbyRkFMRbrpc6+IkKMQ+Zi2Ibr4YPhoEBlbP0Gw3ta23e/GB+LvXNqnV3htOPJNJ54+ToMI43BCYATGQ==
+  dependencies:
+    nuid "^1.0.0"
+    ts-nkeys "^1.0.8"
+
 needle@^2.2.1:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/needle/-/needle-2.3.0.tgz#ce3fea21197267bacb310705a7bbe24f2a3a3492"
@@ -2068,6 +2076,11 @@ nth-check@~1.0.1:
   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
   dependencies:
     boolbase "~1.0.0"
+
+nuid@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/nuid/-/nuid-1.1.0.tgz#e0c5746350a25562f58283197f34c50861f44675"
+  integrity sha512-C/JdZ6PtCqKsCEs4ni76nhBsdmuQgLAT/CTLNprkcLViDAnkk7qx5sSA8PVC2vmSsdBlSsFuGb52v6pwn1oaeg==
 
 number-is-nan@^1.0.0:
   version "1.0.1"
@@ -3014,6 +3027,13 @@ try-require@^1.2.1:
   resolved "https://registry.yarnpkg.com/try-require/-/try-require-1.2.1.tgz#34489a2cac0c09c1cc10ed91ba011594d4333be2"
   integrity sha1-NEiaLKwMCcHMEO2RugEVlNQzO+I=
 
+ts-nkeys@^1.0.8:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/ts-nkeys/-/ts-nkeys-1.0.12.tgz#cda47f4842fe2c4f88b1303817050673e16acb89"
+  integrity sha512-5TgA+wbfxTy/9pdSuAhvneuL65KKoI7phonzNQH2UhnorAQAWehUwHNLEuli596wu/Fxh0SAhMeKZVLNx4s7Ow==
+  dependencies:
+    tweetnacl "^1.0.1"
+
 tunnel-agent@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
@@ -3025,6 +3045,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+
+tweetnacl@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.1.tgz#2594d42da73cd036bd0d2a54683dd35a6b55ca17"
+  integrity sha512-kcoMoKTPYnoeS50tzoqjPY3Uv9axeuuFAZY9M/9zFnhoVvRfxz9K29IMPD7jGmt2c8SW7i3gT9WqDl2+nV7p4A==
 
 type-check@~0.3.2:
   version "0.3.2"

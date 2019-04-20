@@ -20,4 +20,6 @@ services:
     image: nats
     restart: always
     ports:
-      - '4444:4444'
+      - '4222:4222'
+      - '8222:8222'
+      - '6222:6222'

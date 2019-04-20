@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "assignment": "jest ./src/nats/fsMicro.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "express": "^4.16.4",
+    "jest": "^24.7.1",
     "nats": "^1.2.10",
     "pg": "^7.10.0",
     "redis": "^2.8.0"

@@ -1,6 +1,9 @@
 const fsMicro = require('./fsMicro')
 
-async function test () {
+afterAll(() => {
+  fsMicro.disconnect()
+})
+test('should works', async () => {
   fsMicro.connect('localhost:4222')
 
   fsMicro.endpoint('plusOne', msg => {
@@ -8,11 +11,5 @@ async function test () {
   })
 
   const response = await fsMicro.request('plusOne', '3')
-  if (response === '4') {
-      console.log('Test Passed')
-  } else {
-    console.log('Test Failed')
-  }
-}
-
-test().then(c => console.log('Done deal')).catch(err => console.log(err))
+  expect(response).toEqual('4')
+})

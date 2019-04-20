@@ -40,18 +40,6 @@ app.get('/find-pg', async (req, res) => {
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
-async function saveTo3rdParty (data) {
-  try {
-    const result = await 3rdParty.save(data)
-    return {
-      success: true,
-      data: result
-    }
-  } catch (err) {
-    Log.error('Error saving to 3rd party:', err)
-  }
-}
-
 async function retryBy(count, func) {
   for (let retryCount = 0; retryCount < count; retryCount++) {
     const res = await func()
